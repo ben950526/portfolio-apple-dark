@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+ 
+  body {
+    line-height: 1.6;
+    background: #111111;
+    color: #e5e5e5;
+  }
+ 
+  /* Navbar - Apple風格 */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(17, 17, 17, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #222222;
+  }
+ 
+  .navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #aaaaaa;
+  }
+ 
+  /* Hero - 乾淨簡約 */
+  .hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a1a, #111111);
+  }
+ 
+  .hero span {
+    color: #60a5fa;
+  }
+ 
+  .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 28px;
+    background: #ffffff;
+    color: #111111;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-weight: 500;
+  }
+ 
+  /* Section */
+  .section {
+    padding: 80px 50px;
+    text-align: center;
+    background: #111111;
+  }
+ 
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+ 
+  .card {
+    background: #1a1a1a;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border-radius: 16px;
+    border: 1px solid #222222;
+  }
+ 
+  .card img {
+    width: 100%;
+  }
+ 
+  .card:hover {
+    transform: scale(1.04);
+  }
+ 
+  /* Form */
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+  }
+ 
+  form input, form textarea {
+    margin: 10px 0;
+    padding: 12px;
+    background: #1f1f1f;
+    border: 1px solid #333;
+    color: #e5e5e5;
+    border-radius: 8px;
+  }
+ 
+  button {
+    padding: 12px;
+    background: #60a5fa;
+    color: #111111;
+    border: none;
+    border-radius: 8px;
+  }
+ 
+  /* Animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s;
+  }
+ 
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+ 
+  /* RWD */
+  @media(max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+ 
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  /* About Me 區塊 */
+  .about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .about-photo {
+    width: 420px;
+    height: 420px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    flex-shrink: 0;
+  }
+
+  .about-content {
+    max-width: 480px;
+    text-align: left;
+    padding-top: 20px;
+  }
+
+  .contact-info {
+    margin-top: 30px;
+    padding: 25px;
+    background: #1a1a1a;
+    border-radius: 16px;
+    border-left: 5px solid #60a5fa;
+  }
+
+  .contact-info h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #ffffff;
+  }
+
+  .contact-info p {
+    margin: 10px 0;
+    color: #bbbbbb;
+  }
+
+  /* My Projects 區塊間距調整 */
+  #projects {
+    padding-top: 80px;
+  }
+
+  #projects h2 {
+    margin-bottom: 100px !important;
+    color: #ffffff;
+  }
+
+  .project-detail {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .project-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .project-image-container {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  }
+
+  .project-info {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+  }
+
+  .project-info h1 {
+    margin-top: 0;
+    font-size: 2.8rem;
+    color: #ffffff;
+  }
+
+  .category {
+    color: #60a5fa;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .project-info h3 {
+    margin-top: 35px;
+    margin-bottom: 12px;
+    color: #e5e5e5;
+  }
+
+  /* 手機版 */
+  @media (max-width: 768px) {
+    .project-content {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  /* Back Button */
+  .back-btn {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 1.05rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .back-btn:hover {
+    color: #60a5fa;
+    text-decoration: underline;
+  }
